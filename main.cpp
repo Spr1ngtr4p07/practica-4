@@ -66,11 +66,10 @@ int main() {
         return 1;
     }
 
-    // Variables para los costos entre routers
+    // Variables costos entre routers
     int AB, AC, AD, BC, BD, CD;
-    unsigned char c;
 
-    // Leer datos del archivo de entrada
+    // Leer los datos
     entrada >> AB >> AC >> AD >> BC >> BD >> CD;
 
     if (entrada.fail()) {
@@ -78,7 +77,7 @@ int main() {
         return 1;
     }
 
-    cout << "\nCalculando caminos más cortos (sin Dijkstra)...\n";
+    cout << "\nCalculando caminos más cortos \n";
 
     int costoA_C1 = AC;
     int costoA_C2 = AB + BC;          // A a B a C
@@ -108,16 +107,16 @@ int main() {
 
 
     // Mostrar resultados en pantalla
-    cout << "Camino más corto A → C = " << costoA_C << endl;
-    cout << "Camino más corto B → D = " << costoB_D << endl;
-    cout << "Camino más corto A → B = " << costoA_B << endl;
-    cout << "Camino más corto C → D = " << costoC_D << endl;
+    cout << "Camino más corto A a C = " << costoA_C << endl;
+    cout << "Camino más corto B a D = " << costoB_D << endl;
+    cout << "Camino más corto A a B = " << costoA_B << endl;
+    cout << "Camino más corto C a D = " << costoC_D << endl;
 
     // Guardar resultados en el archivo de salida
-    salida << "Camino más corto A → C = " << costoA_C << "\n";
-    salida << "Camino más corto B → D = " << costoB_D << "\n";
-    salida << "Camino más corto A → B = " << costoA_B << "\n";
-    salida << "Camino más corto C → D = " << costoC_D << "\n";
+    salida << "Camino más corto A a C = " << costoA_C << "\n";
+    salida << "Camino más corto B a D = " << costoB_D << "\n";
+    salida << "Camino más corto A a B = " << costoA_B << "\n";
+    salida << "Camino más corto C a D = " << costoC_D << "\n";
 
     entrada.close();
     salida.close();
